@@ -1,0 +1,7 @@
+require "ToyRobot/version"
+require "ToyRobot/main"
+require "ToyRobot/robot"
+require "ToyRobot/table"
+require "ToyRobot/location"
+require "ToyRobot/direction"
+require "ToyRobot/errors"
