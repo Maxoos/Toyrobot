@@ -28,7 +28,7 @@ module ToyRobot
            when /RIGHT/
              @robot.right!
            when /REPORT/
-             puts @robot.current_location.to_array.join(",")
+             puts @robot.report
          end
        rescue Exception => e
         puts e.message and next

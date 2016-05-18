@@ -81,4 +81,16 @@ describe ToyRobot::Robot do
     end
   end
 
+  describe ".report" do
+    context "when location is not set" do
+      it { expect{subject.move!}.to raise_error Error::LocationNotSetError }
+    end
+
+    it "should set a new direction" do
+      subject.place(3,3,"WEST")
+      subject.report
+      expect(subject.report).to eq "3,3,WEST"
+    end
+  end
+
 end

@@ -44,6 +44,11 @@ module ToyRobot
       @current_location.direction = Direction.right_of current_location.direction
     end
 
+    def report
+      raise Error::LocationNotSetError unless current_location
+      @current_location.to_array.join(",")
+    end
+
 
   end
 end
